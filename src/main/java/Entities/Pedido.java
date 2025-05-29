@@ -9,6 +9,8 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -25,4 +27,6 @@ public class Pedido extends Base {
     private Sucursal sucursal;
     private Factura factura;
     private Cliente cliente;
+
+    private Set<DetallePedido> detallePedidos = new HashSet<>();
 }
