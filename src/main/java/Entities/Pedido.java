@@ -29,4 +29,7 @@ public class Pedido extends Base {
     private Cliente cliente;
 
     private Set<DetallePedido> detallePedidos = new HashSet<>();
+    public void agregarDetallePedido(DetallePedido detallePedido){
+        detallePedidos.add(detallePedido);
+    }
 }

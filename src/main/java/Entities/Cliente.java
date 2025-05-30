@@ -1,6 +1,8 @@
 package Entities;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,5 +22,10 @@ public class Cliente extends Base{
     private LocalDate fechaNacimiento;
     private Imagen imagen;
     private Usuario usuario;
+    private Set<Pedido> pedidos = new HashSet<>();
+
+    public void agregarPedido(Pedido pedido){
+        pedidos.add(pedido);
+    }
 
 }

@@ -19,5 +19,7 @@ public class ArticuloManufacturado extends Base{
     private String preparacion;
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
-
+    public void agregarDetalleArticuloManufacturado(ArticuloManufacturadoDetalle articuloManufacturadoDetalle) {
+        articuloManufacturadoDetalles.add(articuloManufacturadoDetalle);
+    }
 }

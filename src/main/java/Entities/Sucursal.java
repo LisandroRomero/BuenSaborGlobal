@@ -1,7 +1,8 @@
 package Entities;
 
 import java.time.LocalTime;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 import lombok.AllArgsConstructor;
@@ -18,6 +19,10 @@ public class Sucursal extends Base{
     private String nombre;
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;
-
+    private Domicilio domicilio;
     private Empresa empresa;
+    private Set<Categoria> categorias = new HashSet<>();
+    public void agregarCategorias(Categoria categoria){
+        categorias.add(categoria);
+    }
 }

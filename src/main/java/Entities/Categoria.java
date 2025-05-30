@@ -17,7 +17,9 @@ public class Categoria extends Base{
     private String denominacion;
     private Categoria categoriaPadre;
     private Set<Categoria> subcategorias = new HashSet<>();
-
+    public void agregarSubcategoria(Categoria categoria){
+        subcategorias.add(categoria);
+    }
 
 
 }
