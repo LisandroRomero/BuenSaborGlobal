@@ -16,5 +16,8 @@ import java.util.Set;
 public class Provincia extends Base{
     private String nombre;
     private Pais pais;
-    private Set<Localidad> localidad = new HashSet<>();
+    private Set<Localidad> localidades = new HashSet<>();
+    public void agregarLocalidad(Localidad localidad){
+        localidades.add(localidad);
+    }
 }

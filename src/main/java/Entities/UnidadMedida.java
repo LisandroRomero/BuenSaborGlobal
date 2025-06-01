@@ -14,6 +14,9 @@ import java.util.Set;
 @NoArgsConstructor
 public class UnidadMedida extends Base{
     private String denominacion;
+    private Set<Articulo> articulos = new HashSet<>();
 
-    private Set<Articulo> articulo = new HashSet<>();
+    public void agregarArticulos(Articulo articulo){
+        articulos.add(articulo);
+    }
 }

@@ -19,9 +19,12 @@ public class Sucursal extends Base{
     private String nombre;
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;
-    private Empresa empresa;
     private Domicilio domicilio;
+    private Empresa empresa;
 
-    private Set<Imagen> imagen = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
+    private Set<Categoria> categorias = new HashSet<>();
+    public void agregarCategorias(Categoria categoria){
+        categorias.add(categoria);
+    }
 }

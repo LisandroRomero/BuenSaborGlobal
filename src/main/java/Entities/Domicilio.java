@@ -20,6 +20,10 @@ public class Domicilio extends Base{
     private Localidad localidad ;
     private Set<Pedido> pedidos = new HashSet<>();
     private Set<Cliente> clientes = new HashSet<>();
+    public void agregarCliente(Cliente cliente){
+        clientes.add(cliente);
+    }
+
 
 
 }
