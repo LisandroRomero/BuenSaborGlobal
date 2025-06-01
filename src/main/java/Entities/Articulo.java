@@ -17,6 +17,13 @@ import lombok.Setter;
 public abstract class Articulo extends Base{
     protected String denominacion;
     protected Double precioVenta;
+
+    private Set<Imagen> imagen = new HashSet<>();
+    private Set<Promocion> promocion = new HashSet<>();
+    private Set<Categoria> categorias = new HashSet<>();
+
+
+
     protected Set<DetallePedido> Detallespedido = new HashSet<>();
     protected UnidadMedida unidadMedida;
     protected Categoria categoria;

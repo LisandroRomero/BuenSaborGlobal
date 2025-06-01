@@ -13,10 +13,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ArticuloManufacturado extends Base{
+public class ArticuloManufacturado extends Articulo{
     private String descripcion;
     private Integer tiempoEstimadoMinutos;
     private String preparacion;
+
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
 

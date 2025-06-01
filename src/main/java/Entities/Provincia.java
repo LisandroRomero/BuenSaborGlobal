@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -12,5 +15,6 @@ import lombok.Setter;
 
 public class Provincia extends Base{
     private String nombre;
-    private Provincia provincia;
+    private Pais pais;
+    private Set<Localidad> localidad = new HashSet<>();
 }

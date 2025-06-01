@@ -1,5 +1,6 @@
 package Entities;
 
+import Enums.Estado;
 import Enums.FormaPago;
 import Enums.TipoEnvio;
 import lombok.AllArgsConstructor;
@@ -20,13 +21,14 @@ public class Pedido extends Base {
     private LocalTime horaEstimadaFinalizacion;
     private Double total;
     private Double totalCosto;
+    private Estado estado;
     private TipoEnvio tipoEnvio;
     private FormaPago formaPago;
     private LocalDate fechaPedido;
     private Domicilio domicilio;
-    private Sucursal sucursal;
+    // private Sucursal sucursal;
     private Factura factura;
-    private Cliente cliente;
+    // private Cliente cliente;
 
     private Set<DetallePedido> detallePedidos = new HashSet<>();
 }

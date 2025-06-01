@@ -14,5 +14,6 @@ import java.util.Set;
 @NoArgsConstructor
 public class Localidad extends Base{
     private String nombre;
+    private Provincia provincia;
     private Set<Domicilio> domicilios = new HashSet<>();
 }

@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Factura extends Base {
     private LocalDate fechaFacturacion;
     private Integer mpPaymentId;
-    private Integer mpMercantOrderId;
+    private Integer mpMerchantOrderId; //solo cambio error tipografico con el UML
     private String mpPreferenceId;
     private String mpPaymentType;
     private Double totalVenta;
