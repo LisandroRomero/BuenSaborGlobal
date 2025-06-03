@@ -15,8 +15,7 @@ import java.util.Set;
 
 public class DetallePedido extends Base {
     private Integer cantidad;
-    private Double subTotal;
-    //private Articulo articulo;  //   REVISAR ESTO PORFAVOR YA QUE ARTICULO ES ABSTRACTO!!!!!!!!!
-    private Set<Articulo> articulo = new HashSet<>(); //porque (DetallePedido n-1 Articulo)
+    private double subTotal;
+    private Articulo articulo;
 
 }

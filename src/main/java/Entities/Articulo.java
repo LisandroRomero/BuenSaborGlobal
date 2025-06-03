@@ -20,11 +20,18 @@ public abstract class Articulo extends Base{
 
     private Set<Imagen> imagen = new HashSet<>();
     private Set<Promocion> promocion = new HashSet<>();
-    private Set<Categoria> categorias = new HashSet<>();
-
-
-
     protected Set<DetallePedido> Detallespedido = new HashSet<>();
+
     protected UnidadMedida unidadMedida;
     protected Categoria categoria;
+
+    public void agregarImagen(Imagen i){
+        imagen.add(i);
+    }
+    public void agregarPromocion(Promocion p){
+        promocion.add(p);
+    }
+    public void agregarDetallePedido(DetallePedido d){
+        Detallespedido.add(d);
+    }
 }

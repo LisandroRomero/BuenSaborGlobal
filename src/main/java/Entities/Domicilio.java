@@ -23,7 +23,9 @@ public class Domicilio extends Base{
     public void agregarCliente(Cliente cliente){
         clientes.add(cliente);
     }
-
+    public void agregarPedido(Pedido p){
+        pedidos.add(p);
+    }
 
 
 }

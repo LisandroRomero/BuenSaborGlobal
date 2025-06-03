@@ -29,5 +29,7 @@ public class Cliente extends Base{
     public void agregarPedido(Pedido pedido){
         pedidos.add(pedido);
     }
-
+    public void agregarDomicilio(Domicilio d){
+        domicilios.add(d);
+    }
 }

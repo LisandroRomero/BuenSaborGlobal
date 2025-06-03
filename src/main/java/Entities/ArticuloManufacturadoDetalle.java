@@ -12,4 +12,5 @@ import lombok.Setter;
 public class ArticuloManufacturadoDetalle {
     private Integer cantidad;
     private ArticuloManufacturado articuloManufacturado;
+    private ArticuloInsumo  articuloInsumo;
 }

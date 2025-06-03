@@ -20,6 +20,7 @@ public class Empresa extends Base {
     private Integer cuil;
     private Set<Sucursal> sucursales = new HashSet<>();
 
+
     public void agregarSucursal(Sucursal sucursal) {
         sucursales.add(sucursal);
     }

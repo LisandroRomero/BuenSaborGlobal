@@ -22,9 +22,17 @@ public class Sucursal extends Base{
     private Domicilio domicilio;
     private Empresa empresa;
 
+
+    private Set<Promocion> promociones = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
     private Set<Categoria> categorias = new HashSet<>();
-    public void agregarCategorias(Categoria categoria){
-        categorias.add(categoria);
+    public void agregarCategorias(Categoria c){
+        categorias.add(c);
+    }
+    public void agregarPromociones(Promocion p){
+        promociones.add(p);
+    }
+    public void agregarPedidos(Pedido p){
+        pedidos.add(p);
     }
 }

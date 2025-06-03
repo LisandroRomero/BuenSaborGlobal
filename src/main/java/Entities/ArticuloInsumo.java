@@ -21,4 +21,7 @@ public class ArticuloInsumo extends Articulo{
 
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
+    public void agregarArticuloManufacturadoDetalle(ArticuloManufacturadoDetalle a){
+        articuloManufacturadoDetalles.add(a);
+    }
 }

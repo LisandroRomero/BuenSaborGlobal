@@ -32,4 +32,7 @@ public class Promocion {
     public void agregarImagenes(Imagen imagen){
         imagenes.add(imagen);
     }
+    public void agregarArticulo(Articulo a){
+        articulo.add(a);
+    }
 }

@@ -20,7 +20,7 @@ public class ArticuloManufacturado extends Articulo{
 
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
-    public void agregarDetalleArticuloManufacturado(ArticuloManufacturadoDetalle articuloManufacturadoDetalle) {
-        articuloManufacturadoDetalles.add(articuloManufacturadoDetalle);
+    public void agregarDetalleArticuloManufacturado(ArticuloManufacturadoDetalle a) {
+        articuloManufacturadoDetalles.add(a);
     }
 }
