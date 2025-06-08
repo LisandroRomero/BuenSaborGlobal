@@ -24,8 +24,17 @@ public class Empresa extends Base {
 
 
     public void agregarSucursal(Sucursal sucursal) {
+
         sucursales.add(sucursal);
     }
 
-
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nombre='" + nombre + '\'' +
+                ", razonSocial='" + razonSocial + '\'' +
+                ", cuil=" + cuil +
+                ", sucursales=" + sucursales +
+                '}';
+    }
 }
