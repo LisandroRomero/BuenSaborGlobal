@@ -18,6 +18,12 @@ public class ArticuloManufacturado extends Articulo{
     private Integer tiempoEstimadoMinutos;
     private String preparacion;
 
+    public ArticuloManufacturado(String descripcion, Integer tiempoEstimadoMinutos, String preparacion) {
+        this.descripcion = descripcion;
+        this.tiempoEstimadoMinutos = tiempoEstimadoMinutos;
+        this.preparacion = preparacion;
+    }
+
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
     public void agregarDetalleArticuloManufacturado(ArticuloManufacturadoDetalle a) {

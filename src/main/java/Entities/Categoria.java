@@ -18,6 +18,10 @@ public class Categoria extends Base{
     private String denominacion;
     private Categoria categoriaPadre;
 
+    public Categoria(String denominacion) {
+        this.denominacion = denominacion;
+    }
+
     private Set<Sucursal> sucursalPadre = new HashSet<>();
     private Set<Categoria> subcategorias = new HashSet<>();
     private Set<Articulo> articulo = new HashSet<>();

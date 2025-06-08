@@ -15,6 +15,12 @@ import java.util.Set;
 public class Localidad extends Base{
     private String nombre;
     private Provincia provincia;
+
+    public Localidad(String nombre, Provincia provincia) {
+        this.nombre = nombre;
+        this.provincia = provincia;
+    }
+
     private Set<Domicilio> domicilios = new HashSet<>();
     public void agregarDomicilio (Domicilio domicilio){
         domicilios.add(domicilio);

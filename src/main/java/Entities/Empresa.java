@@ -18,9 +18,13 @@ public class Empresa extends Base {
     private String nombre;
     private String razonSocial;
     private Integer cuil;
+
+    public Empresa(String nombre, String razonSocial, Integer cuil) {
+        this.nombre = nombre;
+        this.razonSocial = razonSocial;
+        this.cuil = cuil;
+    }
     private Set<Sucursal> sucursales = new HashSet<>();
-
-
     public void agregarSucursal(Sucursal sucursal) {
         sucursales.add(sucursal);
     }

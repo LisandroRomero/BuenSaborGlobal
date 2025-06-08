@@ -20,5 +20,9 @@ public class Pais extends Base{
         provincias.add(provincia);
     }
 
+    public Pais(String nombre){
+        this.nombre = nombre;
+    }
+
 
 }

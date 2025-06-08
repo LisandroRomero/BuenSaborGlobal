@@ -26,10 +26,21 @@ public class Cliente extends Base{
     private Set<Domicilio> domicilios;
     private Set<Pedido> pedidos = new HashSet<>();
 
+    public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Usuario usuario, Imagen imagen)
+    {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+        this.usuario = usuario;
+        this.imagen = imagen;
+    }
+
     public void agregarPedido(Pedido pedido){
         pedidos.add(pedido);
     }
-    public void agregarDomicilio(Domicilio d){
+    public void agregarDomicilio(Domicilio d) {
         domicilios.add(d);
     }
 }

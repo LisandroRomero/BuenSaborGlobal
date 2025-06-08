@@ -19,6 +19,14 @@ public class ArticuloInsumo extends Articulo{
     private Integer stockMaximo;
     private Boolean esParaElaborar;
 
+    public ArticuloInsumo(String denominacion, Double precioVenta, UnidadMedida unidadMedida, Categoria categoria, Double precioCompra, Integer stockActual, Integer stockMaximo, Boolean esParaElaborar) {
+        super(denominacion, precioVenta, unidadMedida, categoria);
+        this.precioCompra = precioCompra;
+        this.stockActual = stockActual;
+        this.stockMaximo = stockMaximo;
+        this.esParaElaborar = esParaElaborar;
+    }
+
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
     public void agregarArticuloManufacturadoDetalle(ArticuloManufacturadoDetalle a){

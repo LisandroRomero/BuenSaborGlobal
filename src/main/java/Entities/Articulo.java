@@ -17,13 +17,16 @@ import lombok.Setter;
 public abstract class Articulo extends Base{
     protected String denominacion;
     protected Double precioVenta;
+    protected UnidadMedida unidadMedida;
+    protected Categoria categoria;
+
+    public Articulo(String denominacion, Double precioVenta, UnidadMedida unidadMedida, Categoria categoria){
+
+    }
 
     private Set<Imagen> imagen = new HashSet<>();
     private Set<Promocion> promocion = new HashSet<>();
     protected Set<DetallePedido> Detallespedido = new HashSet<>();
-
-    protected UnidadMedida unidadMedida;
-    protected Categoria categoria;
 
     public void agregarImagen(Imagen i){
         imagen.add(i);

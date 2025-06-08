@@ -22,6 +22,12 @@ public class Sucursal extends Base{
     private Domicilio domicilio;
     private Empresa empresa;
 
+    public Sucursal(String nombre, LocalTime horarioApertura, LocalTime horarioCierre) {
+        this.nombre = nombre;
+        this.horarioApertura = horarioApertura;
+        this.horarioCierre = horarioCierre;
+    }
+
 
     private Set<Promocion> promociones = new HashSet<>();
     private Set<Pedido> pedidos = new HashSet<>();
