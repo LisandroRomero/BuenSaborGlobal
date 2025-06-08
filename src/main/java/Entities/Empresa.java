@@ -1,10 +1,7 @@
 package Entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
@@ -15,6 +12,8 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@ToString
+@EqualsAndHashCode
 
 public class Empresa extends Base {
     private String nombre;
@@ -26,15 +25,5 @@ public class Empresa extends Base {
     public void agregarSucursal(Sucursal sucursal) {
 
         sucursales.add(sucursal);
-    }
-
-    @Override
-    public String toString() {
-        return "Empresa{" +
-                "nombre='" + nombre + '\'' +
-                ", razonSocial='" + razonSocial + '\'' +
-                ", cuil=" + cuil +
-                ", sucursales=" + sucursales +
-                '}';
     }
 }

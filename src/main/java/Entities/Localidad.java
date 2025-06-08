@@ -1,9 +1,6 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
@@ -15,6 +12,9 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@ToString
+@EqualsAndHashCode
+
 public class Localidad extends Base{
     private String nombre;
     private Provincia provincia;
@@ -23,27 +23,4 @@ public class Localidad extends Base{
         domicilios.add(domicilio);
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Localidad localidad = (Localidad) o;
-        return Objects.equals(nombre, localidad.nombre) && Objects.equals(provincia, localidad.provincia) && Objects.equals(domicilios, localidad.domicilios);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), nombre, provincia, domicilios);
-    }
-
-
-    @Override
-    public String toString() {
-        return "Localidad{" +
-                "nombre='" + nombre + '\'' +
-                ", provincia=" + provincia +
-                ", domicilios=" + domicilios +
-                '}';
-    }
 }

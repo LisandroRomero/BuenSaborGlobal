@@ -1,10 +1,7 @@
 package Entities;
 
 import Entities.Base;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Getter
@@ -12,6 +9,8 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@ToString
+@EqualsAndHashCode
 
 public class Imagen extends Base {
     private String denominacion;
@@ -20,13 +19,4 @@ public class Imagen extends Base {
     private Cliente cliente;
 
 
-    @Override
-    public String toString() {
-        return "Imagen{" +
-                "denominacion='" + denominacion + '\'' +
-                ", promocion=" + promocion +
-                ", articulo=" + articulo +
-                ", cliente=" + cliente +
-                '}';
-    }
 }
