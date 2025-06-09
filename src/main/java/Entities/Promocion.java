@@ -5,16 +5,16 @@ import Enums.TipoPromocion;
 import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.Set;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 
 public class Promocion {
     private String denominacion;
@@ -26,7 +26,9 @@ public class Promocion {
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
 
+    @Builder.Default
     private Set<Imagen> imagenes = new HashSet<>();
+    @Builder.Default
     private Set<Articulo> articulo = new HashSet<>();
 
     public void agregarImagenes(Imagen imagen){

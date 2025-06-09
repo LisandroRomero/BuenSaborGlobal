@@ -1,29 +1,26 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-import java.awt.geom.Area;
 import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor              //REVISAR UML Y TERMINAR !!!!!!!!!!
+@NoArgsConstructor
+@SuperBuilder
 
 public class Categoria extends Base{
     private String denominacion;
     private Categoria categoriaPadre;
 
-    public Categoria(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
+    @Builder.Default
     private Set<Sucursal> sucursalPadre = new HashSet<>();
+    @Builder.Default
     private Set<Categoria> subcategorias = new HashSet<>();
+    @Builder.Default
     private Set<Articulo> articulo = new HashSet<>();
     public void agregarSubcategoria(Categoria categoria){
         subcategorias.add(categoria);

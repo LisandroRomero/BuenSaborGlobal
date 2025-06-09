@@ -3,17 +3,15 @@ package Entities;
 import java.time.LocalDate;
 import java.util.Set;
 import java.util.HashSet;
-import java.util.Set;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 
 public class Cliente extends Base{
     private String nombre;
@@ -23,19 +21,11 @@ public class Cliente extends Base{
     private LocalDate fechaNacimiento;
     private Imagen imagen;
     private Usuario usuario;
-    private Set<Domicilio> domicilios;
+    @Builder.Default
+    private Set<Domicilio> domicilios = new HashSet<>();
+    @Builder.Default
     private Set<Pedido> pedidos = new HashSet<>();
 
-    public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento, Usuario usuario, Imagen imagen)
-    {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-        this.email = email;
-        this.fechaNacimiento = fechaNacimiento;
-        this.usuario = usuario;
-        this.imagen = imagen;
-    }
 
     public void agregarPedido(Pedido pedido){
         pedidos.add(pedido);

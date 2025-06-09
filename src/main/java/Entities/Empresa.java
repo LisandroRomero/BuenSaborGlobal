@@ -1,10 +1,8 @@
 package Entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,17 +11,13 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@SuperBuilder
 public class Empresa extends Base {
     private String nombre;
     private String razonSocial;
     private Integer cuil;
 
-    public Empresa(String nombre, String razonSocial, Integer cuil) {
-        this.nombre = nombre;
-        this.razonSocial = razonSocial;
-        this.cuil = cuil;
-    }
+    @Builder.Default
     private Set<Sucursal> sucursales = new HashSet<>();
     public void agregarSucursal(Sucursal sucursal) {
         sucursales.add(sucursal);

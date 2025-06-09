@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 
@@ -12,10 +13,12 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
+
 public class Factura extends Base {
     private LocalDate fechaFacturacion;
     private Integer mpPaymentId;
-    private Integer mpMerchantOrderId; //solo cambio error tipografico con el UML
+    private Integer mpMerchantOrderId;
     private String mpPreferenceId;
     private String mpPaymentType;
     private Double totalVenta;

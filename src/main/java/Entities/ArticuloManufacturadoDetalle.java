@@ -4,17 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;  //REVISARRRRR!!!!!!!!
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ArticuloManufacturadoDetalle {
+@SuperBuilder
+
+public class ArticuloManufacturadoDetalle extends Base {
     private Integer cantidad;
     private ArticuloManufacturado articuloManufacturado;
     private ArticuloInsumo  articuloInsumo;
 
-    public ArticuloManufacturadoDetalle(Integer cantidad) {
-        this.cantidad = cantidad;
-    }
 }

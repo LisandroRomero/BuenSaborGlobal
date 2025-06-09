@@ -1,9 +1,7 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,13 +10,12 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
+
 public class UnidadMedida extends Base{
     private String denominacion;
 
-    public UnidadMedida(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
+    @Builder.Default
     private Set<Articulo> articulos = new HashSet<>();
 
     public void agregarArticulos(Articulo articulo){

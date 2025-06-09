@@ -1,9 +1,7 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,17 +10,14 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 
 public class Pais extends Base{
     private String nombre;
+    @Builder.Default
     private Set<Provincia> provincias = new HashSet<>();
     public void agregarProvincia (Provincia provincia){
         provincias.add(provincia);
     }
-
-    public Pais(String nombre){
-        this.nombre = nombre;
-    }
-
 
 }

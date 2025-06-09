@@ -1,9 +1,7 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,16 +9,12 @@ import java.util.Set;
 @Getter
 @Setter
 @AllArgsConstructor
+@SuperBuilder
 @NoArgsConstructor
 public class Localidad extends Base{
     private String nombre;
     private Provincia provincia;
-
-    public Localidad(String nombre, Provincia provincia) {
-        this.nombre = nombre;
-        this.provincia = provincia;
-    }
-
+    @Builder.Default
     private Set<Domicilio> domicilios = new HashSet<>();
     public void agregarDomicilio (Domicilio domicilio){
         domicilios.add(domicilio);

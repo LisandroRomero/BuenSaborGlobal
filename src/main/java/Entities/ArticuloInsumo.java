@@ -1,9 +1,7 @@
 package Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +10,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 
 public class ArticuloInsumo extends Articulo{
     private Double precioCompra;
@@ -19,14 +18,7 @@ public class ArticuloInsumo extends Articulo{
     private Integer stockMaximo;
     private Boolean esParaElaborar;
 
-    public ArticuloInsumo(String denominacion, Double precioVenta, UnidadMedida unidadMedida, Categoria categoria, Double precioCompra, Integer stockActual, Integer stockMaximo, Boolean esParaElaborar) {
-        super(denominacion, precioVenta, unidadMedida, categoria);
-        this.precioCompra = precioCompra;
-        this.stockActual = stockActual;
-        this.stockMaximo = stockMaximo;
-        this.esParaElaborar = esParaElaborar;
-    }
-
+    @Builder.Default
     private Set<ArticuloManufacturadoDetalle> articuloManufacturadoDetalles = new HashSet<>();
 
     public void agregarArticuloManufacturadoDetalle(ArticuloManufacturadoDetalle a){
